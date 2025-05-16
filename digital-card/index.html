@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Card - My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">YOUSSEF</h1>
+        <div class="hidden md:flex space-x-4">
+          <a href="#about" class="hover:text-blue-500">About</a>
+          <a href="#projects" class="hover:text-blue-500">Projects</a>
+          <a href="#gallery" class="hover:text-blue-500">Gallery</a>
+          <a href="#faq" class="hover:text-blue-500">FAQ</a>
+          <a href="#contact" class="hover:text-blue-500">Contact</a>
+        </div>
+        <!-- Toggle Theme -->
+        <button onclick="toggleDarkMode()" class="mr-4">
+          🌙
+        </button>
+        <!-- Hamburger -->
+        <button class="md:hidden" onclick="document.getElementById('sidebar').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="md:hidden hidden bg-white dark:bg-gray-800 shadow p-4 space-y-2">
+      <a href="#about" class="block">About</a>
+      <a href="#projects" class="block">Projects</a>
+      <a href="#gallery" class="block">Gallery</a>
+      <a href="#faq" class="block">FAQ</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-10">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg">I'm Youssef from Egypt  , I'm a high school student passionate about web development and design. I love turning ideas into real, functional stuff on the web. Let's build something awesome! 🚀💻</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto px-4 py-10">
+      <h2 class="text-3xl font-bold mb-6">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold">Portfolio Website</h3>
+          <p>A responsive personal website using Tailwind CSS.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold">To-Do App</h3>
+          <p>Simple to-do list web app built with vanilla JS and Tailwind.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mx-auto px-4 py-10">
+      <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240228073050/Screenshot-2024-02-28-073036.png" alt="Gallery 1" class="rounded shadow hover:scale-105 transition" />
+        <img src="https://knowledge.hubspot.com/hubfs/how-to-start-coding-13-20250321-3779156.webp" alt="Gallery 2" class="rounded shadow hover:scale-105 transition" />
+        <img src="https://cdn.buttercms.com/Dt1SRzdKSg6Dqejkm13p" alt="Gallery 3" class="rounded shadow hover:scale-105 transition" />
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto px-4 py-10">
+      <h2 class="text-3xl font-bold mb-6">FAQ</h2>
+      <div class="space-y-4">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h4 class="font-semibold">Why do you like web development?</h4>
+          <p>I enjoy bringing designs to life and solving real-world problems.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h4 class="font-semibold">What tools do you use?</h4>
+          <p>Mainly Tailwind CSS, VS Code, and GitHub.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-4 py-10">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <form class="space-y-4 max-w-md">
+        <input type="text" placeholder="Your Name" class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600" required />
+        <input type="email" placeholder="Your Email" class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600" required />
+        <textarea placeholder="Your Message" class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600" required></textarea>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow mt-10 py-4 text-center">
+      <p>&copy; 2025 Artem. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>
